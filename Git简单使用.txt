@@ -1,0 +1,12 @@
+开始一个已存在的新工程时，要做的准备工作
+--------------------------------
+1.先拉取项目代码 【git clone git@github.com:zhangjianlabs/git-flow.git】
+2.创建usercontroller分支【git branch dev-userservice】，切换到开发分支 【git checkout dev-userservice】
+3.打开工程，开始码代码
+4.新功能开发完成后，将新创建的文件添加到跟踪索引 【git add UserController.py】
+  你的编辑器可能会自动把文件加入跟踪，所以这步可能已经隐式执行了，注意编辑器中工程下新建文件的git版本图标
+5.将变更提交到存储库，这时新功能只存在于本地的分支中，不要删除分支！！！ 【git commit -a -m '新功能哦，做完喽，我提交喽'】
+  你可能还会需要将测试通过的新功能合并到master分支中 
+  先回到 master 分支【git checkout master 】，然后将指定分支合并到 master【git merge dev-userservice】
+6.将合并后的master推送到远程存储库，使其它同事也能获取到新功能的代码【git push】
+7.dev-userservice 分支没用了，干掉【git branch -d dev-userservice】
